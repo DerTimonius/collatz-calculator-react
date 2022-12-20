@@ -10,7 +10,6 @@ export default function Graph({ data }: Props) {
   const interval = data.length > 5 ? 5 : 2;
   const options = {
     animationEnabled: true,
-    exportEnabled: true,
     theme: 'dark1',
     title: {
       text: 'Collatz Data',
@@ -30,9 +29,5 @@ export default function Graph({ data }: Props) {
       },
     ],
   };
-  return (
-    <div>
-      <CanvasJSChart options={options} />
-    </div>
-  );
+  return <CanvasJSChart options={options} />;
 }
